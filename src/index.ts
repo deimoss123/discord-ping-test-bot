@@ -29,7 +29,7 @@ const pingArr: number[] = [];
 
 client.on('messageCreate', async message => {
   if (message.guildId !== guildId) return;
-  if (message.content !== 'ping') return;
+  if (!message.content.startsWith('ping')) return;
 
   const time1 = message.createdTimestamp;
   // console.log('time1', time1);
@@ -49,8 +49,8 @@ client.on('messageCreate', async message => {
 
   if (i++ < TEST_COUNT) {
     setTimeout(() => {
-      message.channel.send('ping');
-    }, 2000);
+      message.channel.send(`ping ${i}`);
+    }, 3000);
   } else {
     console.log('finished');
     process.exit(0);
