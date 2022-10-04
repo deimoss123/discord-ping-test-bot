@@ -12,7 +12,7 @@ const client = new Client({
 });
 
 let i = 1;
-const TEST_COUNT = 10;
+const TEST_COUNT = 50;
 
 const guildId = '875083366611955712';
 const channelId = '900491672536875049';
