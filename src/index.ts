@@ -53,6 +53,7 @@ client.on('messageCreate', async message => {
     }, 2000);
   } else {
     console.log('finished');
+    process.exit(0);
   }
 });
 
